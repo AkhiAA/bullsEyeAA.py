@@ -1,26 +1,18 @@
 # bullsEye by akhi abdullah
 from graphics import *
 
-#def draw_cir(Cx, Cy, size, color, bullWin):
-#    circle = circle(point(Cx,Cy),point(Cx, Cy))
-#    circle.setFill(color)
-#    circle.draw(bullWin)
+def draw_cir(cX, cY, size, color, bullWin):
+    circle = Circle(Point(cX,cY), size)
+    circle.setFill(color)
+    circle.draw(bullWin)
 
 cirSz=50
-cirCol = "red"
+cirCol = "dark red"
 
 bullWin = GraphWin("BullsEye",cirSz*10, cirSz*10)
-bullWin.setCoords(0,0,900, 900)
+bullWin.setCoords(0,0,cirSz*10, cirSz*10)
 
-
-rCircle = Circle(Point(450,450), 25.5)
-rCircle.setFill(color_rgb(230,10,10))
-rCircle.draw(bullWin)
-
-
-
-
-
+draw_cir(cirSz*5, cirSz*5, cirSz, cirCol, bullWin)
 
 
 

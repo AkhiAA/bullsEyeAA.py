@@ -2,6 +2,12 @@
 
 from graphics import *
 
+cirSz=50
+cirCol = "red"
+cirX = cirSz*5
+cirY = cirSz*5
+
+
 def draw_cir(cX, cY, size, color, bullWin):
     circle = Circle(Point(cX,cY), size)
     circle.setFill(color)
@@ -9,17 +15,17 @@ def draw_cir(cX, cY, size, color, bullWin):
 
 def draw_be(bX, bY, rings, bSize, bColor, bullWin):
     for i in range (rings):
-        bSize = rings * 10
+        if (i) % 2 == 1:
+            bColor = "white"
+        else:
+            bColor = "red"
+
         bSize -= 10
         draw_cir(bX, bY, bSize, bColor, bullWin)
         
     
     
 
-cirSz=50
-cirCol = "red"
-cirX = cirSz*5
-cirY = cirSz*5
 
 bullWin = GraphWin("BullsEye",cirSz*10, cirSz*10)
 bullWin.setCoords(0,0,cirSz*10, cirSz*10)

@@ -23,12 +23,13 @@ cirSz=60
 cirCol2 = "orange"
 cirX = cirSz*5
 cirY = cirSz*5
-    
+
+rS = int(input("How many rings would you like your bullsEye to have? >"))   
    
 bullWin = GraphWin("BullsEye",cirSz*10, cirSz*10)
 bullWin.setCoords(0,0,cirSz*10, cirSz*10)
 
-for j in range (20):
+for j in range (rS):
     ranX = randint(cirSz, cirSz * 9)
     ranY = randint(cirSz, cirSz * 9)
     ranRs = randint(3, 20)

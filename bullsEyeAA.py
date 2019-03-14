@@ -31,7 +31,8 @@ bullWin.setCoords(0,0,cirSz*10, cirSz*10)
 for j in range (20):
     ranX = randint(cirSz, cirSz * 9)
     ranY = randint(cirSz, cirSz * 9)
-    draw_be(ranX, ranY, 10, 6, cirCol1, cirCol2, bullWin)
+    ranRs = randint(3, 20)
+    draw_be(ranX, ranY, ranRs, 6, cirCol1, cirCol2, bullWin)
 
 
 bullWin.getMouse()

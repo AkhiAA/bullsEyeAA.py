@@ -24,7 +24,17 @@ cirCol2 = "orange"
 cirX = cirSz*5
 cirY = cirSz*5
 
-rS = int(input("How many rings would you like your bullsEye to have? >"))   
+ringS = False
+while ringS == False:
+    try:
+        rS = int(input("How many rings would you like your bullsEye to have? >"))
+        if rS > 0:
+            ringS = True
+        else:
+            print(" try again using a positive integer")
+    except ValueError:
+        print ("Maybe try using an actual number.. ")
+        
    
 bullWin = GraphWin("BullsEye",cirSz*10, cirSz*10)
 bullWin.setCoords(0,0,cirSz*10, cirSz*10)

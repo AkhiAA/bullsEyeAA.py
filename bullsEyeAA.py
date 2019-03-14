@@ -1,6 +1,7 @@
 # bullsEye by akhi abdullah
 
 from graphics import *
+from random import *
 
 def draw_cir(cX, cY, size, color, bullWin):
     circle = Circle(Point(cX,cY), size)
@@ -27,8 +28,10 @@ cirY = cirSz*5
 bullWin = GraphWin("BullsEye",cirSz*10, cirSz*10)
 bullWin.setCoords(0,0,cirSz*10, cirSz*10)
 
-
-draw_be(cirX, cirY, 100, 3, cirCol1, cirCol2, bullWin)
+for j in range (20):
+    ranX = randint(cirSz, cirSz * 9)
+    ranY = randint(cirSz, cirSz * 9)
+    draw_be(ranX, ranY, 10, 6, cirCol1, cirCol2, bullWin)
 
 
 bullWin.getMouse()
